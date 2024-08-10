@@ -1,0 +1,1 @@
+created a  daily quote website that can generate daily quotes using HTML, CSS and Javascript. In addtion one can tweet the quote in their twitter handle.
