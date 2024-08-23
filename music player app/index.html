@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Music Player </title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/2cc7ebcc8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i> 
+                </div>
+            </nav> 
+            <img src="/images/vinyl-record.webp" class="song-img">
+            <h1>East West</h1>
+            <p>John Patitucci</p>
+            <audio id="audio">
+                <source src="media/East West - John Patitucci.mp3" type="audio/mp3">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls" id="song">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let progress = document.getElementById("progress");
+        let audio = document.getElementById("audio");
+        let ctrlIcon = document.getElementById("ctrlIcon");
+
+        audio.onloadedmetadata = function(){
+            progress.max = audio.duration;
+            progress.value = audio.currentTime;
+        }
+
+        function playPause(){
+          if(ctrlIcon.classList.contains("fa-pause")){
+            audio.pause();
+            ctrlIcon.classList.remove("fa-pause");
+            ctrlIcon.classList.add("fa-play");
+
+          }  
+          else{
+            audio.play();
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+          }
+          if (!audio.paused) {  
+             setInterval(() => {
+        progress.value = audio.currentTime;  
+          }, 500);}
+
+          progress.onchange = function (){
+            audio.play();
+            audio.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");   
+          }
+
+
+ 
+        }
+       
+    </script>
+    
+</body>
+</html>
