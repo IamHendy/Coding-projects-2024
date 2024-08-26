@@ -1,0 +1,1 @@
+In this calculator app I create UI design using HTML and CSS then added calculator functionality with the help for simple JavaScript code.
