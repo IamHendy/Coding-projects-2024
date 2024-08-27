@@ -1,0 +1,2 @@
+I  created a password input field on website, in this password field, there is an icon to hide and display the password written in the input filed. The icon will be updated too when we click on it. 
+The  hide / show toggle password was made using HTML, CSS and JavaScript step by step.
