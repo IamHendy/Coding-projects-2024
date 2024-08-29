@@ -1,0 +1,1 @@
+I created a coming soon page or launching son page design using HTML and CSS, On this website, I added an Email subscription form or newsletter subscription form also. I will send this HTML form data on Google Sheets so that I can see the email subscribers list on Google Sheets.
