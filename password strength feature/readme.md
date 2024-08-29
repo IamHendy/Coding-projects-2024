@@ -1,0 +1,1 @@
+ I created a password input box, and when Il enter anything in the password field, it will display the password strength and it will also change the border color of password field according to the password strength.
