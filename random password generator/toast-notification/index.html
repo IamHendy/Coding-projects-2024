@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast notification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="showToast('Successfully submitted')">Success</button>
+        <button onclick="showToast('Please fix the error')">Error</button>
+        <button onclick="showToast('Invalid input, check again ')">Invalid</button>
+    </div>  
+    
+    <div id="toastBox">
+    </div>
+    <script>
+        let toastBox = document.getElementById('toastBox');
+
+        function showToast(message) {
+            let toast = document.createElement('div');
+            toast.classList.add('toast');
+            toast.innerHTML = message;
+            toastBox.appendChild(toast);
+
+            // Remove the toast after 3 seconds
+            setTimeout(function() {
+                toastBox.removeChild(toast);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>

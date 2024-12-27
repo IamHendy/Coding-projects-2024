@@ -1,0 +1,1 @@
+ created a product page design that can be used on ecommerce website. On this product page design it will display the product image gallery and product description. We will also add option to choose the product variation before buying. We will make this ecommerce product page using HTML, CSS and JavaScript.

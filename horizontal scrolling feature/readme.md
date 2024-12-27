@@ -1,0 +1,1 @@
+I learnt how to scroll horizontally using Mouse wheel. I made the horizontal scroll image gallery using HTML CSS and JavaScript.

@@ -1,0 +1,1 @@
+create a basic toast that appears after clicking a button using html, CSS and javascript.

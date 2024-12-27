@@ -1,0 +1,1 @@
+learnt how to make a progress bar. I  added gradient color in this progress bar. I used SVG circles to make this animation.
