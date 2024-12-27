@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Links</title>
+    <title>Coding Projects</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.5em;
+            color: #444;
+            letter-spacing: 1px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Grid Layout for Projects */
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            list-style: none;
+            margin: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        li:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background-color: #eaf1f7;
+            border-color: #007bff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design for Different Screen Sizes */
+        @media (max-width: 1024px) {
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>Coding Projects</h1>
     <p>Here is a list of the projects done with simple HTML, CSS, and JS:</p>
     <ul>
         <li><a href="https://IamHendy.github.io/Coding-projects-2024/age%20calculator/index.html">Age Calculator</a></li>
