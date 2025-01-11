@@ -1,0 +1,241 @@
+/* General Styles */
+:root {
+    --dark-bg: #0a2370;
+    --dark-text: #dcdcdc;
+    --light-bg: #f4f4f4;
+    --light-text: #333;
+    --accent-color: #0a2370;
+    --gradient-btn: linear-gradient(45deg, #0a2370, #1f60f2);
+    --footer-gradient: linear-gradient(45deg, #0a2370, #1f60f2);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark and Light Mode */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.project p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: var(--light-text);
+    line-height: 1.5;
+}
+
+.project button {
+    background: var(--gradient-btn);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project button:hover {
+    transform: scale(1.05);
+    background: white;
+    color: var(--accent-color);
+}
+
+/* Skills Section */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#skills li {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#contact li {
+    font-size: 1.2rem;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #f4f4f4;
+}
+
+/* Footer Section */
+footer {
+    background: var(--footer-gradient);
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--gradient-btn);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#scroll-to-top:hover {
+    background: white;
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
