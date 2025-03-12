@@ -1,32 +1,36 @@
-/* General Styles */
 :root {
-    --dark-bg: #0a2370;
-    --dark-text: #dcdcdc;
-    --light-bg: #f4f4f4;
+    --dark-bg: #0a0f1e;
+    --dark-text: #d4d4d4;
+    --light-bg: #ffffff;
     --light-text: #333;
-    --accent-color: #0a2370;
-    --gradient-btn: linear-gradient(45deg, #0a2370, #1f60f2);
-    --footer-gradient: linear-gradient(45deg, #0a2370, #1f60f2);
+    --accent-color: #1f60f2;
+    --gradient-btn: linear-gradient(45deg, #1f60f2, #0a2370);
+    --footer-gradient: linear-gradient(45deg, #0a0f1e, #0a2370);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
 }
 
-/* Dark and Light Mode */
-.dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
-
-.light-mode {
+/* Light and Dark Mode */
+body.light-mode {
     background-color: var(--light-bg);
     color: var(--light-text);
 }
 
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.light-mode .intro {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
 /* Header Section */
 header {
     display: flex;
@@ -37,24 +41,25 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
     text-decoration: none;
     color: inherit;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -65,68 +70,66 @@ nav a:hover {
 /* Intro Section */
 .intro {
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
     background-color: var(--dark-bg);
-    color: white;
+  
 }
 
 .intro h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .intro p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: 20px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* Projects Section */
 .projects-grid {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     margin-top: 40px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .project {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: #121a2f;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    width: 320px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
 }
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
 .project h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--accent-color);
 }
 
 .project p {
-    font-size: 1rem;
-    margin-top: 10px;
-    color: var(--light-text);
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 .project button {
     background: var(--gradient-btn);
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 12px 18px;
+    font-size: 1.2rem;
     cursor: pointer;
     margin-top: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -137,16 +140,25 @@ nav a:hover {
 }
 
 /* Skills Section */
+#skills {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+}
+
 #skills ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
 #skills li {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -154,20 +166,18 @@ nav a:hover {
 
 /* Contact Section */
 #contact {
-    padding: 40px 20px;
+    padding: 50px 20px;
     background-color: var(--dark-bg);
     color: white;
+    text-align: center;
 }
 
 #contact h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
+    font-size: 2.5rem;
 }
 
 #contact p {
-    text-align: center;
-    font-size: 20px;
+    font-size: 1.4rem;
 }
 
 #contact ul {
@@ -180,12 +190,13 @@ nav a:hover {
 }
 
 #contact li {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #contact a {
     color: white;
     text-decoration: none;
+    font-size: 1.3rem;
 }
 
 #contact a:hover {
@@ -194,11 +205,14 @@ nav a:hover {
 
 /* Footer Section */
 footer {
-    background: var(--footer-gradient);
+    background: var(--dark-bg);
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Scroll to Top Button */
@@ -210,9 +224,9 @@ footer {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
     cursor: pointer;
     display: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -239,3 +253,4 @@ footer {
         align-items: center;
     }
 }
+

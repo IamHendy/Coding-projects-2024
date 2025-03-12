@@ -3,15 +3,19 @@
 const themeToggleBtn = document.getElementById("theme-toggle");
 const bodyElement = document.body;
 
+// Start with Light Mode
+bodyElement.classList.add("light-mode");
+themeToggleBtn.textContent = "🌙";
+
 themeToggleBtn.addEventListener("click", () => {
-  if (bodyElement.classList.contains("dark-mode")) {
-    bodyElement.classList.remove("dark-mode");
-    bodyElement.classList.add("light-mode");
-    themeToggleBtn.textContent = "🌙";
-  } else {
+  if (bodyElement.classList.contains("light-mode")) {
     bodyElement.classList.remove("light-mode");
     bodyElement.classList.add("dark-mode");
     themeToggleBtn.textContent = "🌞";
+  } else {
+    bodyElement.classList.remove("dark-mode");
+    bodyElement.classList.add("light-mode");
+    themeToggleBtn.textContent = "🌙";
   }
 });
 
